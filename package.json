@@ -1,0 +1,26 @@
+{
+	"name": "sentiments-js",
+	"version": "1.0.0",
+	"license": "MIT",
+	"type": "module",
+	"repository": "https://github.com/christophe77/sentiments-js",
+	"exports": {
+		"require": "./dist/cjs/index.js",
+		"import": "./dist/esm/index.js"
+	},
+	"scripts": {
+		"build": "npx tsc --module commonjs --outDir dist/cjs/ && npx tsc --module es2022  --outDir dist/esm/",
+		"test": "npx tsx ./exemples/index.ts"
+	},
+	"main": "dist/cjs/index.js",
+	"devDependencies": {
+		"@types/node": "^20.11.30",
+		"eslint": "^8.57.0",
+		"prettier": "^3.2.5",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.4.3"
+	},
+	"dependencies": {
+		"@tensorflow/tfjs": "^4.17.0"
+	}
+}

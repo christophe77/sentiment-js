@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"declaration": false,
+		"sourceMap": true,
+		"module": "es6",
+		"target": "es6",
+		"noImplicitAny": false,
+		"removeComments": true,
+		"moduleResolution": "node",
+		"lib": ["es5", "es6", "dom"]
+	},
+	"include": ["src"],
+	"exclude": ["node_modules/", "dist"]
+}
