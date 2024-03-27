@@ -17,10 +17,14 @@ or
 
 ## How to use
 
-sentimentsJS.analyse takes an object as parameter. The object has 2 properties :
+the "analyse" function takes an object as parameter. 
+
+The object has 2 properties :
 
 - text : string
 - type : 'sentiment' | "toxicity" | "both" | "combined"
+
+Exemple :
 
         import sentimentsJS from 'sentiments-js';
 
