@@ -1,4 +1,4 @@
-import sentimentsJS from '../dist/esm/index';
+import sentimentsJS from '../dist/';
 
 const checkThisText = async () => {
 	// sentiment

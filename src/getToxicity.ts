@@ -1,7 +1,9 @@
 import * as tfToxicity from '@tensorflow-models/toxicity';
 import { ToxicityPrediction, ToxicityResult } from './types';
 
-export default async function getToxicity(text: string): Promise<ToxicityResult[]> {
+export default async function getToxicity(
+	text: string,
+): Promise<ToxicityResult[]> {
 	const threshold = 0.9;
 	const toxicityLabels = [];
 	const model = await tfToxicity.load(threshold, toxicityLabels);
