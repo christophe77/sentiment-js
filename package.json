@@ -1,6 +1,6 @@
 {
 	"name": "sentiments-js",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"type": "module",
 	"repository": "https://github.com/christophe77/sentiments-js",

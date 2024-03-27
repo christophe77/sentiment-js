@@ -50,7 +50,7 @@ const computeSentiment: (
 	if (score === 0.65) return 'neutral';
 };
 
-async function getSentiment(text: string): Promise<Sentiment> {
+export default async function getSentiment(text: string): Promise<Sentiment> {
 	const modelToUse = await tf.loadLayersModel(
 		'https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/model.json',
 	);
@@ -81,5 +81,3 @@ async function getSentiment(text: string): Promise<Sentiment> {
 	};
 	return sentiment;
 }
-
-export default getSentiment;

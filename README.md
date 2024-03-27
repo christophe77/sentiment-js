@@ -20,25 +20,38 @@ or
 sentimentsJS.analyse takes an object as parameter. The object has 2 properties :
 
 - text : string
-- type : 'sentiment' | "toxicity" | "all"
+- type : 'sentiment' | "toxicity" | "both" | "combined"
 
         import sentimentsJS from 'sentiments-js';
+
 	    const checkThisText = async () => {
+            // sentiment
 		    const beerScore = await sentimentsJS.analyse({
 			    text: 'I love cold beers',    
-			    type: 'all',    
+			    type: 'sentiment',    
 		    });
 		    console.log("'I love cold beers' : ", JSON.stringify(beerScore));
+
+            // toxicity
 		    const vegetableScore = await sentimentsJS.analyse({
 			    text: 'I really hate those fucking vegetables',
-			    type: 'all',
+			    type: 'toxicity',
 			});
 		    console.log("'I really hate those fucking vegetables' : ", JSON.stringify(vegetableScore));
+
+            // both
 		    const insultScore = await sentimentsJS.analyse({
 			    text: 'You are just a fucking bitch. You just deserve to receive cum on your dirty shitty face',
-			    type: 'all',
-		   });
-		 console.log( "'You are just a fucking bitch. You just deserve to receive cum on your dirty shitty face' : ",   JSON.stringify(insultScore) );
+			    type: 'both',
+		    });
+		    console.log( "'You are just a fucking bitch. You just deserve to receive cum on your dirty shitty face' : ",   JSON.stringify(insultScore) );
+
+            // combined
+		    const combinedScore = await sentimentsJS.analyse({
+			    text: 'You are just a fucking bitch. You just deserve to receive cum on your dirty shitty face',
+			    type: 'combined',
+		    });
+		    console.log( "'You are just a fucking bitch. You just deserve to receive cum on your dirty shitty face' : ",   JSON.stringify(combinedScore) );
 		 };
 
 Console output will be :
@@ -62,14 +75,16 @@ Console output will be :
 		]
     }
 
+    'You are just a fucking bitch. You just deserve to receive cum on your 	dirty shitty face' : 
+	{
+		"combined":"negative"
+    }
+
   
 
 Has you can see on the 3rd exemple, the sentences are very vulgar but the sentiment is computed as "positive".
-
-That's why I added a toxicity classification so you can check both toxicity and sentiment result to determinate if it's a false positive.
+That's why I added a "combined" classification so you can check both toxicity and sentiment result to determinate if it's a false positive.
 
 ## TODO
-
-- Combine sentiment and toxicity classification to get the most accurate sentiment result.
 
 - add a tensorflow backend to get better speed and performance.

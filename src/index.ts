@@ -1,10 +1,12 @@
 import getSentiment from './getSentiment';
 import getToxicity from './getToxicity';
+import getCombined from './getCombined';
 
 interface IAnalyseProps {
 	text: string;
-	type: 'sentiment' | "toxicity" | "all";
+	type: 'sentiment' | 'toxicity' | 'both' | 'combined';
 }
+
 async function analyse({ text, type }: IAnalyseProps) {
 	if (type === 'sentiment') {
 		const sentiment = await getSentiment(text);
@@ -16,6 +18,13 @@ async function analyse({ text, type }: IAnalyseProps) {
 		return {
 			toxicity,
 		};
+	} else if (type === 'combined') {
+		const sentiment = await getSentiment(text);
+		const toxicity = await getToxicity(text);
+		const combined = await getCombined(sentiment, toxicity);
+		return {
+			combined,
+		};
 	} else {
 		const sentiment = await getSentiment(text);
 		const toxicity = await getToxicity(text);
@@ -26,6 +35,6 @@ async function analyse({ text, type }: IAnalyseProps) {
 	}
 }
 const sentimentsJS = {
-	analyse
+	analyse,
 };
 export default sentimentsJS;
