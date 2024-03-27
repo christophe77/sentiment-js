@@ -8,11 +8,11 @@ With this package you'll be able to get the overall **sentiment** from a text an
 
 # Installation
 
-    yarn add
+    yarn add sentiments-js
 
 or
 
-    npm install
+    npm install sentiments-js
 
 
 ## How to use
@@ -22,7 +22,7 @@ sentimentsJS.analyse takes an object as parameter. The object has 2 properties :
 - text : string
 - type : 'sentiment' | "toxicity" | "all"
 
-        import sentimentsJS from 'sentimentsJS';
+        import sentimentsJS from 'sentiments-js';
 	    const checkThisText = async () => {
 		    const beerScore = await sentimentsJS.analyse({
 			    text: 'I love cold beers',    
