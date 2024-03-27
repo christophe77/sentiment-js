@@ -14,5 +14,5 @@ export default {
     sourcemap : true,
   },
   external: ['@tensorflow/tfjs', '@tensorflow-models/toxicity'],
-  plugins: [typescript()]
+  plugins: [typescript({ sourceMap: true })]
 };
