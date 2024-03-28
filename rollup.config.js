@@ -4,15 +4,24 @@ import * as tfToxicity from '@tensorflow-models/toxicity';
 
 export default {
   input: './src/index.ts',
-  output: {
-    dir: 'dist',
-    format: 'cjs',
-    globals: {
-      '@tensorflow/tfjs': 'tf',
-      '@tensorflow-models/toxicity' : 'tfToxicity'
+  output: [
+    {
+      file: 'dist/index.esm.js',
+      format: 'es',
+      sourcemap: true
     },
-    sourcemap : true,
-  },
+    {
+      file: 'dist/index.umd.js',
+      format: 'umd',
+      name: 'sjs',
+      exports:'default',
+      globals: {
+        '@tensorflow/tfjs': 'tf',
+        '@tensorflow-models/toxicity': 'tfToxicity'
+      },
+      sourcemap: true,
+    }
+  ],
   external: ['@tensorflow/tfjs', '@tensorflow-models/toxicity'],
-  plugins: [typescript({ sourceMap: true })]
+  plugins: [typescript({ sourceMap: true, tsconfig: './tsconfig.json' })]
 };

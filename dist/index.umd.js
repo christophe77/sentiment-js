@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@tensorflow/tfjs'), require('@tensorflow-models/toxicity')) :
     typeof define === 'function' && define.amd ? define(['@tensorflow/tfjs', '@tensorflow-models/toxicity'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global["'sentimentsJS'"] = factory(global.tf, global.tfToxicity));
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.sjs = factory(global.tf, global.tfToxicity));
 })(this, (function (tf, tfToxicity) { 'use strict';
 
     function _interopNamespaceDefault(e) {
@@ -187,11 +187,11 @@
             }
         });
     }
-    const sentimentsJS = {
-        analyse,
+    const sjs = {
+        analyse
     };
 
-    return sentimentsJS;
+    return sjs;
 
 }));
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.umd.js.map

@@ -1,14 +1,15 @@
 {
-	"compilerOptions": {
-		"declaration": false,
-		"sourceMap": true,
-		"module": "es6",
-		"target": "es6",
-		"noImplicitAny": false,
-		"removeComments": true,
-		"moduleResolution": "node",
-		"lib": ["es5", "es6", "dom"]
-	},
-	"include": ["src/**/*.ts"],
-	"exclude": ["node_modules/", "dist"]
+  "compilerOptions": {
+    "declaration": false,
+    "sourceMap": true,
+    "module": "es6",
+    "target": "es6",
+    "outDir": "./dist/types",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "lib": ["es5", "es6", "dom"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/", "dist"]
 }

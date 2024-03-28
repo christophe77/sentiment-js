@@ -3,7 +3,6 @@
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": 2,
-    "class-name": true,
     "curly": 1,
     "eofline": true,
     "forin": true,

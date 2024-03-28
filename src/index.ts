@@ -34,7 +34,7 @@ async function analyse({ text, type }: IAnalyseProps) {
 		};
 	}
 }
-const sentimentsJS = {
-	analyse,
-};
-export default sentimentsJS;
+const sjs = {
+	analyse
+}
+export default sjs;
