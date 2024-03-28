@@ -8,11 +8,11 @@ With this package you'll be able to get the overall **sentiment** from a text an
 
 # Installation
 
-    yarn add sentiment-js
+    yarn add @christophe77/sentiment-js
 
 or
 
-    npm install sentiment-js
+    npm install @christophe77/sentiment-js
 
 
 ## How to use
@@ -26,7 +26,7 @@ The object has 2 properties :
 
 Exemple :
 
-        import sjs from 'sentiments-js';
+        import sjs from '@christophe77/sentiment-js';
 
 	    const checkThisText = async () => {
             // sentiment

@@ -1,4 +1,4 @@
-import { Sentiment, ToxicityResult } from './types';
+import { Sentiment, ToxicityResult } from './types/index.js';
 
 export default async function getCombined(
 	sentiment: Sentiment,

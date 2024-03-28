@@ -1,6 +1,6 @@
-import getSentiment from './getSentiment';
-import getToxicity from './getToxicity';
-import getCombined from './getCombined';
+import getSentiment from './getSentiment.js';
+import getToxicity from './getToxicity.js';
+import getCombined from './getCombined.js';
 
 interface IAnalyseProps {
 	text: string;

@@ -1,4 +1,4 @@
-import sjs from '../dist/lib.esm';
+import sjs from '../dist/index.esm';
 
 const checkThisText = async () => {
 	console.log("aaa", JSON.stringify(sjs))

@@ -1,5 +1,5 @@
 import * as tfToxicity from '@tensorflow-models/toxicity';
-import { ToxicityPrediction, ToxicityResult } from './types';
+import { ToxicityPrediction, ToxicityResult } from './types/index.js';
 
 export default async function getToxicity(
 	text: string,

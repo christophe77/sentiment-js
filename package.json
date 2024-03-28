@@ -1,12 +1,16 @@
 {
-  "name": "sentiment-js",
-  "version": "1.0.4",
+  "name": "@christophe77/sentiment-js",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "repository": "https://github.com/christophe77/sentiment-js",
   "exports": {
-    "import": "./dist/lib.esm.js",
-    "require": "./dist/lib.umd.js"
+    ".": {
+      "node": "./dist/index.esm.js",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.umd.js",
+      "default": "./dist/index.esm.js"
+    }
   },
   "scripts": {
     "test": "npx tsx ./exemples/index.ts",

@@ -3,11 +3,11 @@ interface IAnalyseProps {
     type: 'sentiment' | 'toxicity' | 'both' | 'combined';
 }
 declare function analyse({ text, type }: IAnalyseProps): Promise<{
-    sentiment: import("./types").Sentiment;
+    sentiment: import("./types/index.js").Sentiment;
     toxicity?: undefined;
     combined?: undefined;
 } | {
-    toxicity: import("./types").ToxicityResult[];
+    toxicity: import("./types/index.js").ToxicityResult[];
     sentiment?: undefined;
     combined?: undefined;
 } | {
@@ -15,8 +15,8 @@ declare function analyse({ text, type }: IAnalyseProps): Promise<{
     sentiment?: undefined;
     toxicity?: undefined;
 } | {
-    sentiment: import("./types").Sentiment;
-    toxicity: import("./types").ToxicityResult[];
+    sentiment: import("./types/index.js").Sentiment;
+    toxicity: import("./types/index.js").ToxicityResult[];
     combined?: undefined;
 }>;
 declare const sjs: {

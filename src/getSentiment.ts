@@ -1,5 +1,5 @@
 import * as tf from '@tensorflow/tfjs';
-import { Sentiment } from './types';
+import { Sentiment } from './types/index.js';
 
 const OOV_INDEX = 2;
 const PAD_INDEX = 0;

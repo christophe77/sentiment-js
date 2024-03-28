@@ -2,12 +2,12 @@
   "compilerOptions": {
     "declaration": false,
     "sourceMap": true,
-    "module": "es6",
+    "module": "node16",
     "target": "es6",
     "outDir": "./dist/types",
     "noImplicitAny": false,
     "removeComments": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "lib": ["es5", "es6", "dom"]
   },
   "include": ["src/**/*.ts"],
