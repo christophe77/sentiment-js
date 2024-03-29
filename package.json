@@ -1,25 +1,24 @@
 {
   "name": "@christophe77/sentiment-js",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "license": "MIT",
   "repository": "https://github.com/christophe77/sentiment-js",
   "type": "module",
   "exports": {
-    ".": {
-      "import": "./dist-esm/bundle.min.mjs",
-      "require": "./dist-cjs/bundle.min.cjs"
-    }
+    "import": "./dist-esm/bundle.mjs",
+    "require": "./dist-cjs/bundle.cjs"
   },
-  "main": "./dist-cjs/bundle.min.cjs",
-  "module": "./dist-esm/bundle.min.mjs",
+  "main": "./dist-cjs/bundle.cjs",
+  "module": "./dist-esm/bundle.mjs",
   "source": "./src/index.ts",
   "types": "./dist-cjs/index.d.ts",
   "files": [
-    "dist-*/"
+    "dist-*/",
+    "src/"
   ],
   "scripts": {
     "test": "npx tsx ./exemples/index.ts",
-    "build": "rollup --config --sourcemap"
+    "build": "rollup --config"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",

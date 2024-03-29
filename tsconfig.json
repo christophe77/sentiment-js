@@ -2,10 +2,10 @@
   "compilerOptions": {
     "strict": true,
     "declaration": true,
+    "declarationDir": "./",
     "sourceMap": true,
     "module": "nodenext",
     "target": "es6",
-    "outDir": "./",
     "noImplicitAny": false,
     "removeComments": true,
     "moduleResolution": "nodenext",
@@ -13,5 +13,5 @@
     "lib": ["es5", "es6", "dom"]
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules/", "dist"]
+  "exclude": ["node_modules/", "dist", "exemples"]
 }
