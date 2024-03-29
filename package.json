@@ -1,7 +1,7 @@
 {
   "name": "@christophe77/sentiment-js",
-  "version": "1.0.9",
-  "license": "MIT",
+  "version": "1.0.10",
+  "license": "ISC",
   "repository": "https://github.com/christophe77/sentiment-js",
   "description": "Get sentiment and toxicity of a text.",
   "keywords": [

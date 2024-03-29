@@ -112,7 +112,3 @@ Console output will be :
 
 Has you can see on the 3rd exemple, the sentences are very vulgar but the sentiment is computed as "positive".
 That's why I added a "combined" classification so you can check both toxicity and sentiment result to determinate if it's a false positive.
-
-## TODO
-
-- add a tensorflow backend to get better speed and performance.
