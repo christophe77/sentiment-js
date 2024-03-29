@@ -1,8 +1,15 @@
 {
   "name": "@christophe77/sentiment-js",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
   "repository": "https://github.com/christophe77/sentiment-js",
+  "description": "Get sentiment and toxicity of a text.",
+  "keywords": [
+    "tensorflow",
+    "tfjs",
+    "sentiment",
+    "toxicity"
+  ],
   "type": "module",
   "exports": {
     "import": "./dist-esm/bundle.mjs",
