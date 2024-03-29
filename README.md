@@ -24,6 +24,31 @@ The object has 2 properties :
 - text : string
 - type : 'sentiment' | "toxicity" | "both" | "combined"
 
+The function will return the result like this :
+
+			{
+				"sentiment": {
+					"score": 0.9931357502937317,
+					"result": "positive"
+				},
+				"toxicity": [
+					{"label": "insult", "result": true},
+					{"label": "toxicity","result": true},
+					{.......}
+				]
+    		}
+
+property "label" can have those values :
+
+- identity_attack
+- insult
+- obscene
+- severe_toxicity
+- sexual_explicit
+- threat
+- toxicity
+
+
 Exemple :
 
         import sjs from '@christophe77/sentiment-js';
@@ -84,7 +109,6 @@ Console output will be :
 		"combined":"negative"
     }
 
-  
 
 Has you can see on the 3rd exemple, the sentences are very vulgar but the sentiment is computed as "positive".
 That's why I added a "combined" classification so you can check both toxicity and sentiment result to determinate if it's a false positive.

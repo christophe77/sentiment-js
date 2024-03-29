@@ -1,7 +1,8 @@
-import sjs from '../dist/index.esm';
+import sjs from '../dist-esm/bundle.min.mjs';
 
 const checkThisText = async () => {
-	console.log("aaa", JSON.stringify(sjs))
+
+	console.log("aaa", sjs)
   // sentiment
   const beerScore = await sjs.analyse({
     text: 'I love cold beers',

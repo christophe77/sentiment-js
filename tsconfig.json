@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "declaration": false,
+    "strict": true,
+    "declaration": true,
     "sourceMap": true,
-    "module": "node16",
+    "module": "nodenext",
     "target": "es6",
-    "outDir": "./dist/types",
+    "outDir": "./",
     "noImplicitAny": false,
     "removeComments": true,
-    "moduleResolution": "node16",
+    "moduleResolution": "nodenext",
+    "allowSyntheticDefaultImports": true,
     "lib": ["es5", "es6", "dom"]
   },
   "include": ["src/**/*.ts"],

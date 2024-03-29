@@ -14,6 +14,6 @@ export default async function getToxicity(
 				return { label: prediction.label, result: prediction.results[0].match };
 			}
 		})
-		.filter(Boolean);
+		.filter(Boolean) as ToxicityResult[];
 	return toxicityResult;
 }
