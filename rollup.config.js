@@ -19,7 +19,7 @@ export default {
         sourcemap: true,
         format: 'cjs',
     },],
-    external: ['@tensorflow/tfjs', '@tensorflow-models/toxicity'],
+    external: ['@tensorflow/tfjs', '@tensorflow-models/toxicity', '@tensorflow/tfjs-backend-webgl', '@tensorflow/tfjs-backend-wasm'],
     plugins: [
         typescript({ sourceMap: true, tsconfig: './tsconfig.json' }),
         peerDepsExternal(),

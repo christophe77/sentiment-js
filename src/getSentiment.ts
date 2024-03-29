@@ -1,8 +1,18 @@
 import * as tf from '@tensorflow/tfjs';
+import '@tensorflow/tfjs-backend-wasm';
+import '@tensorflow/tfjs-backend-webgl'
 import { Sentiment } from './types/index.js';
 
 const OOV_INDEX = 2;
 const PAD_INDEX = 0;
+
+if (typeof window === 'undefined') {
+  // this is node
+  tf.setBackend('wasm');
+} else {
+  // this is browser
+  tf.setBackend('webgl');
+}
 
 const padSequences = (
   sequences,

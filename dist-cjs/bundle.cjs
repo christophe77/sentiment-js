@@ -1,6 +1,8 @@
 'use strict';
 
 var tf = require('@tensorflow/tfjs');
+require('@tensorflow/tfjs-backend-wasm');
+require('@tensorflow/tfjs-backend-webgl');
 var tfToxicity = require('@tensorflow-models/toxicity');
 
 function _interopNamespaceDefault(e) {
@@ -57,6 +59,12 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
 
 const OOV_INDEX = 2;
 const PAD_INDEX = 0;
+if (typeof window === 'undefined') {
+    tf__namespace.setBackend('wasm');
+}
+else {
+    tf__namespace.setBackend('webgl');
+}
 const padSequences = (sequences, maxLen, padding = 'pre', truncating = 'pre', value = PAD_INDEX) => {
     return sequences.map((seq) => {
         if (seq.length > maxLen) {

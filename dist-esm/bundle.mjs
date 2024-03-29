@@ -1,4 +1,6 @@
 import * as tf from '@tensorflow/tfjs';
+import '@tensorflow/tfjs-backend-wasm';
+import '@tensorflow/tfjs-backend-webgl';
 import * as tfToxicity from '@tensorflow-models/toxicity';
 
 /******************************************************************************
@@ -35,6 +37,12 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
 
 const OOV_INDEX = 2;
 const PAD_INDEX = 0;
+if (typeof window === 'undefined') {
+    tf.setBackend('wasm');
+}
+else {
+    tf.setBackend('webgl');
+}
 const padSequences = (sequences, maxLen, padding = 'pre', truncating = 'pre', value = PAD_INDEX) => {
     return sequences.map((seq) => {
         if (seq.length > maxLen) {
